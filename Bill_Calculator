@@ -1,0 +1,19 @@
+def bill_calc():
+    print("Welcome to the Bill Calculator!")
+
+    bill_total = float(input('What was the total bill?'))
+    print(bill_total)
+
+    percent_tip = float(input('What percent tip would you like to give? 10, 15, or 20?'))
+    print(percent_tip)
+
+    tip = float(percent_tip / 100)
+
+    split_number = float(input('How many people will split the bill?'))
+    print(split_number)
+
+    end_price = float((bill_total + (tip * bill_total)) / split_number)
+    money = '$'
+    print('Each person should pay' ,"{}{:.2f}".format(money, end_price))
+
+bill_calc()
