@@ -1,0 +1,52 @@
+import random
+def rock_paper_scissors():
+    rpc_game = ['''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+ ''', '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)''', '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)''']
+
+    player_choice = int(input(''' What do you choose? Type 0 for rock, 1 for paper, and 2 for scissors:''' ' '))
+    if player_choice == 0:
+        print('You chose:',rpc_game[0])
+    elif player_choice == 1:
+        print('You chose:', rpc_game[1] )
+    elif player_choice == 2:
+        print('You chose:', rpc_game[2])
+        
+
+# the random.randint(a, b) below lets you choose 2 numbers and it generates a random integer in that range
+    cpu_choice = random.randint(0, 2)
+    cpu_rpc = rpc_game[cpu_choice]
+    print('The computer chose:', cpu_rpc)
+
+    if cpu_choice == player_choice:
+        print ('YOU HAVE TIED')
+    elif cpu_choice == 0 and player_choice == 1:
+        print('\n\t' 'Paper covers Rock! YOU WIN!')
+    elif cpu_choice == 1 and player_choice == 2:
+        print('\n\t' 'Scissors cuts Paper! YOU WIN!')
+    elif cpu_choice == 2 and player_choice == 0:
+        print('\n\t' 'Rock breaks Scissors! YOU WIN!')
+    else:
+        print('\n\t' 'YOU LOSE! WHAT A LOSER!')
+
+
+    
+
+rock_paper_scissors()
