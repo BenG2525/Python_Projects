@@ -41,4 +41,5 @@ def treasure_island():
         else:
             print('You were attacked by trout and drowned.' '\n\t' 'GAME OVER')
     else:
-        print('You fell into a hole' '\n\t' 'GAME OVER')       
+        print('You fell into a hole' '\n\t' 'GAME OVER')
+treasure_island()
